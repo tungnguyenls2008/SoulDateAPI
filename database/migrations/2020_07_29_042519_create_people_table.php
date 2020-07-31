@@ -18,6 +18,11 @@ class CreatePeopleTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gender');
+            $table->string('about_me');
+            $table->string('avatar');
+            $table->string('dob');
+            $table->string('age');
+            $table->string('starSign');
             $table->string('hobbies');
             $table->string('phone');
             $table->string('email');

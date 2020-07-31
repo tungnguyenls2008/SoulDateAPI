@@ -52,15 +52,28 @@ $factory->define(Person::class, function (Faker $faker) {
         case 10: $hobby3='guitar';break;
     }
     $hobbies=implode(', ',[$hobby1,$hobby2,$hobby3]);
-    $person= [
+
+    $dob=$faker->date("dS-F-Y",'2000-1-1');
+    $zodiac = ucwords( (string) (new Intervention\Zodiac\Calculator)->make($dob));
+
+    //calculate age
+    $tz  = new DateTimeZone('Europe/Brussels');
+    $age = DateTime::createFromFormat("dS-F-Y", $dob, $tz)
+        ->diff(new DateTime('now', $tz))
+        ->y;
+    return [
 
         'first_name'=>$faker->firstName,
         'last_name'=>$faker->lastName,
         'gender'=>$gender,
+        'about_me'=>$faker->realText(),
+        'avatar'=>$faker->image('public/img/profile',480,640,'people',false),
+        'dob'=>$dob,
+        'age'=>$age,
+        'starSign'=>$zodiac,
         'hobbies'=>$hobbies,
         'email'=>$faker->safeEmail,
         'phone'=>$faker->phoneNumber,
-        'city'=>$faker->city,
+        'city'=>$faker->address,
     ];
-    return $person;
 });

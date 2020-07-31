@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b72e770a4f3e155f9573b64812b2a16c",
+    "content-hash": "4fb509cdf3de1dabc5cb4df775d203a3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -742,6 +742,63 @@
             "time": "2019-07-01T23:21:34+00:00"
         },
         {
+            "name": "intervention/zodiac",
+            "version": "2.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Intervention/zodiac.git",
+                "reference": "06b9e0e956cbc6c59e2e23251229f1e180efefdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Intervention/zodiac/zipball/06b9e0e956cbc6c59e2e23251229f1e180efefdb",
+                "reference": "06b9e0e956cbc6c59e2e23251229f1e180efefdb",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/translation": "~4.0|~5.0|~6.0|~7.0",
+                "nesbot/carbon": "^2.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12.11",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Zodiac\\ZodiacServiceProvider"
+                    ],
+                    "aliases": {
+                        "Zodiac": "Intervention\\Zodiac\\Facades\\Zodiac"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Zodiac\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@olivervogel.com",
+                    "homepage": "https://olivervogel.com/"
+                }
+            ],
+            "description": "Zodiac sign calculator",
+            "keywords": [
+                "birthday",
+                "zodiac"
+            ],
+            "time": "2020-05-12T17:11:17+00:00"
+        },
+        {
             "name": "laravel/framework",
             "version": "v7.22.4",
             "source": {
@@ -961,6 +1018,61 @@
                 "psysh"
             ],
             "time": "2020-07-07T15:10:00+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "da9350533d0da60d5dc42fb7de9c561c72129bba"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/da9350533d0da60d5dc42fb7de9c561c72129bba",
+                "reference": "da9350533d0da60d5dc42fb7de9c561c72129bba",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "phpunit/phpunit": "^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "time": "2020-06-30T20:56:33+00:00"
         },
         {
             "name": "league/commonmark",
