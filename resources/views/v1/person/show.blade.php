@@ -32,6 +32,7 @@
                                         <h3>AGE: {{$age}}</h3>
                                         <p>{{$about_me}}</p>
                                     </div>
+
                                     <div class="hero-info">
                                         <h2>General Info</h2>
                                         <ul>
@@ -42,16 +43,26 @@
                                             <li><span>Phone </span>{{$phone}}</li>
                                         </ul>
                                     </div>
+
                                 </div>
-                                <div class="col-lg-6" style="padding-top: 200px">
+                                <div class="col-6" style="padding-top: 200px">
                                     <figure class="hero-image">
                                         <img src="{{asset('img/profile/'.$avatar)}}" alt="5">
                                     </figure>
                                 </div>
+                                <div class="col-6">
+                                    <a href="#" class="btn btn-block btn-lg site-btn btn-primary" name="send_date_request">Send Date Request</a>
+                                    <a href="#" class="btn btn-block site-btn btn-danger" name="send_like">Send a Heart <i class="fa fa-heart-o" style="size: 50px"></i></a>
+                                    <a href="#" class="btn btn-block site-btn btn-secondary" name="follow">Follow</a>
+                                </div>
                             </div>
+
                         </div>
+
                     </div>
+
                 </div>
+
             </section>
             <!-- Hero section end -->
 

@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 ////    Route::resource('/people', 'Views\v1\PersonController')
 ////        ->only('index');
 //});
-Route::get('/v1/person/{person}/show','Views\v1\PersonController@show')->name('person.show');
+Route::get('/v1/person/{person}/show','Views\v1\PersonController@show')->name('v1.person.show');
+Route::get('/v1/home','Views\v1\PersonController@index')->name('v1.home');

@@ -14,8 +14,9 @@ class PersonController extends Controller
     public function show(Person $person){
         return view('v1.person.show',with($person));
     }
-    public function index(): PersonResourceCollection {
-        return new PersonResourceCollection(Person::paginate());
+    public function index() {
+        $people= Person::paginate(5);
+        return view('v1.home', with($people)) ;
     }
 
     /**
