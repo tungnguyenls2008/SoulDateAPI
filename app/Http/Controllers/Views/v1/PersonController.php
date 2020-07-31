@@ -16,7 +16,7 @@ class PersonController extends Controller
     }
     public function index() {
         $people= Person::paginate(5);
-        return view('v1.home', with($people)) ;
+        return view('v1.home', compact('people')) ;
     }
 
     /**
